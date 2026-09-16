@@ -3,21 +3,29 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --surface: #f1f1f1;
+  --primary: #303030;
+  --body: #333333;
+  --card: #404040;
+  --accent: #437223;
+  --accent-hover: #36591b;
+  --panel: #eeeeee;
+  color-scheme: light;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-primary: var(--primary);
+  --color-body: var(--body);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-panel: var(--panel);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-poppins-custom: var(--font-poppins);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
