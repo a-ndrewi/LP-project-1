@@ -1,6 +1,8 @@
 import Image from "next/image"
 
 export default function Home() {
+  const basePath = "/LP-project-1"
+
   return (
     <main className="min-h-screen bg-white pt-0 pl-0 pr-5 pb-5 md:pt-0 md:pl-0 md:pr-6 md:pb-6">
       {/* Hero */}
@@ -50,7 +52,7 @@ export default function Home() {
           <div className="relative flex w-full items-end justify-center bg-white pt-8 md:w-1/2 md:pt-0">
             <div className="absolute right-10 top-10 flex h-26 w-26 items-center justify-center rounded-full border border-[#303030]">
               <Image
-                src="/images/Font circle.png"
+                src={`${basePath}/images/font-circle.png`}
                 alt="Heart Icon"
                 width={40}
                 height={40}
@@ -59,7 +61,7 @@ export default function Home() {
             </div>
             <div className="w-full max-w-[600px] md:max-w-[680px] lg:max-w-[760px]">
               <Image
-                src="/images/plants-4-removebg-preview.png"
+                src={`${basePath}/images/plants-4-removebg-preview.png`}
                 alt="Plant"
                 width={850}
                 height={850}
@@ -83,7 +85,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-full bg-[#eeeeee]" />
 
               <Image
-                src="/images/plant-1-removebg-preview.png"
+                src={`${basePath}/images/plant-1-removebg-preview.png`}
                 alt="Plant"
                 width={50}
                 height={50}
@@ -107,7 +109,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-full bg-[#eeeeee]" />
 
               <Image
-                src="/images/plant-2-removebg-preview.png"
+                src={`${basePath}/images/plant-2-removebg-preview.png`}
                 alt="Plant"
                 width={80}
                 height={80}
@@ -131,7 +133,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-full bg-[#eeeeee]" />
 
               <Image
-                src="/images/plant-3-removebg-preview.png"
+                src={`${basePath}/images/plant-3-removebg-preview.png`}
                 alt="Plant"
                 width={50}
                 height={50}
