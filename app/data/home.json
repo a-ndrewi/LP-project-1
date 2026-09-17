@@ -1,0 +1,52 @@
+{
+    "header": {
+        "title": "Green Home"
+    },
+    "hero": {
+        "titleStart": "Bring",
+        "titleAccentOne": "GREEN",
+        "titleMiddle": "to your home and make you feel",
+        "titleAccentTwo": "BETTER",
+        "description": "Discover the benefits of bringing greenery into your living space."
+    },
+    "stats": [
+        {
+            "value": "124K+",
+            "label": "Happy Customers"
+        },
+        {
+            "value": "126",
+            "label": "Plants Available"
+        },
+        {
+            "value": "10+",
+            "label": "Years of Experience"
+        }
+    ],
+    "buttons": {
+        "findPlant": "Find your plant"
+    },
+    "plantHighlights": [
+        {
+            "image": "/images/plant-1-removebg-preview.png",
+            "alt": "Plant 1",
+            "text": "This is a beautiful plant that will enhance your living space."
+        },
+        {
+            "image": "/images/plant-2-removebg-preview.png",
+            "alt": "Plant 2",
+            "text": "Another stunning plant that brings life to any room."
+        },
+        {
+            "image": "/images/plant-3-removebg-preview.png",
+            "alt": "Plant 3",
+            "text": "A unique plant that adds character to your home."
+        }
+    ],
+    "footer": {
+        "text": "© 2026 Green Home. All rights reserved."
+    }
+
+
+
+}
