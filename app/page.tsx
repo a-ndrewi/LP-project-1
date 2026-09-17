@@ -1,14 +1,23 @@
 import Image from "next/image"
+import PlantHighlightsCarousel from "./PlantHighlightsCarousel"
 
 export default function Home() {
   const basePath = "/LP-project-1"
 
   return (
-    <main className="min-h-screen bg-background p-0 md:pr-6 md:pb-6">
+    <main className="min-h-screen bg-background p-0">
       <head>
         <title>Green Home</title>
         <link rel="icon" href={`${basePath}/favicon.ico`} />
       </head>
+
+      {/* Header */}
+      <header className="w-full  bg-surface">
+        <div className="px-4 py-4 md:px-6">
+          <h1 className="text-2xl font-bold text-center text-accent text-2xl">Green Home</h1>
+        </div>
+      </header>
+
       {/* Hero */}
       <section className="w-full">
         <div className="flex flex-col md:min-h-[650px] md:flex-row">
@@ -49,7 +58,7 @@ export default function Home() {
 
             <button
               type="button"
-              className="mt-8 w-full rounded-full bg-accent px-8 py-4 text-base font-bold text-white transition-colors duration-300 hover:bg-accent-hover sm:w-fit sm:text-lg"
+              className="mt-8 w-full rounded-full bg-accent px-8 py-4 text-base font-bold text-white transition-colors duration-300 hover:bg-accent-hover sm:w-fit sm:text-lg cursor-pointer"
             >
               Find your plant
             </button>
@@ -82,81 +91,14 @@ export default function Home() {
 
       {/* Plant highlights */}
       <section className="mt-5 flex flex-col items-center px-4 pb-8 sm:px-5 md:pl-5">
-        <div className="grid max-w-[1320px] grid-cols-1 gap-6 md:grid-cols-3">
-          
-          {/* Card 1 */}
-          <div className="flex min-h-[110px] items-center gap-4 rounded-[16px] border border-primary px-4 py-4 sm:gap-6 sm:px-6">
-
-            {/* Cercul + planta */}
-            <div className="relative h-20 w-20 shrink-0 sm:h-25 sm:w-25">
-              <div className="absolute inset-0 rounded-full bg-panel" />
-
-              <Image
-                src={`${basePath}/images/plant-1-removebg-preview.png`}
-                alt="Plant"
-                width={50}
-                height={50}
-                className="relative left-2 bottom-2 z-10 h-20 w-14 object-contain sm:left-3 sm:bottom-3 sm:h-30 sm:w-20"
-              />
-            </div>
-
-            {/* Text */}
-            <p className="text-sm leading-6 text-card">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in
-              libero risus.
-            </p>
-
-          </div>
-
-          {/* Card 2 */}
-          <div className="flex min-h-[110px] items-center gap-4 rounded-[16px] border border-primary px-4 py-4 sm:gap-6 sm:px-6">
-
-            {/* Cercul + planta */}
-            <div className="relative h-20 w-20 shrink-0 sm:h-25 sm:w-25">
-              <div className="absolute inset-0 rounded-full bg-panel" />
-
-              <Image
-                src={`${basePath}/images/plant-2-removebg-preview.png`}
-                alt="Plant"
-                width={80}
-                height={80}
-                className="relative left-2 bottom-2 z-10 h-20 w-14 object-contain sm:left-3 sm:bottom-3 sm:h-30 sm:w-20"
-              />
-            </div>
-
-            {/* Text */}
-            <p className="text-sm leading-6 text-card">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in
-              libero risus.
-            </p>
-
-          </div>
-
-          {/* Card 3 */}
-          <div className="flex min-h-[110px] items-center gap-4 rounded-[16px] border border-primary px-4 py-4 sm:gap-6 sm:px-6">
-
-            {/* Cercul + planta */}
-            <div className="relative h-20 w-20 shrink-0 sm:h-25 sm:w-25">
-              <div className="absolute inset-0 rounded-full bg-panel" />
-
-              <Image
-                src={`${basePath}/images/plant-3-removebg-preview.png`}
-                alt="Plant"
-                width={50}
-                height={50}
-                className="relative left-2 bottom-3 z-10 h-20 w-14 object-contain sm:left-2 sm:bottom-5 sm:h-30 sm:w-20"
-              />
-            </div>
-
-            {/* Text */}
-            <p className="text-sm leading-6 text-card">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in
-              libero risus.
-            </p>
-
-          </div>
-        </div>
+        <PlantHighlightsCarousel basePath={basePath} />
       </section>
+
+      <footer>
+        <div className="w-full bg-surface p-4 md:p-6 text-center">
+          <p className="text-sm text-card">© 2026 Green Home. All rights reserved.</p>
+        </div>
+      </footer>
     </main>
   );
 }
