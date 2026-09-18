@@ -1,4 +1,4 @@
-import homeData from "./data/home.json"
+import homeData from "../data/home.json"
 import Image from "next/image";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 

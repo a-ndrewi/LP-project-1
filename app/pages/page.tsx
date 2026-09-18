@@ -1,8 +1,7 @@
-import Image from "next/image"
-import PlantHighlightsCarousel from "./PlantHighlightsCarousel"
-import homeData from "./data/home.json"
-import Header from "./Header"
-import Hero from "./Hero"
+import PlantHighlightsCarousel from "../components/PlantHighlightsCarousel"
+import homeData from "../data/home.json"
+import Header from "../components/Header"
+import Hero from "../components/Hero"
 
 export default function Home() {
   const basePath = "/LP-project-1"

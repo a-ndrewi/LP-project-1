@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description: "Make your home a greener place",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: LayoutProps<"/styles">) {
   return (
     <html
       lang="en"
