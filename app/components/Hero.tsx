@@ -20,13 +20,14 @@ type HeroProps = {
     hero: HeroData;
     stats: Stat[];
     buttonText: string;
+    onOpenCv: () => void;
 };
 
 const item = {
     image: "/images/font-circle.png"
 };
 
-export default function Hero({ basePath, hero, stats, buttonText }: HeroProps) {
+export default function Hero({ basePath, hero, stats, buttonText, onOpenCv }: HeroProps) {
     return (
 
         <section className="w-full">
@@ -66,10 +67,11 @@ export default function Hero({ basePath, hero, stats, buttonText }: HeroProps) {
                 </div>
 
                 <button
-                type="button"
-                className="mt-8 w-full rounded-full bg-accent px-8 py-4 text-base font-bold text-white transition-colors duration-300 hover:bg-accent-hover sm:w-fit sm:text-lg cursor-pointer"
+                    type="button"
+                    onClick={onOpenCv}
+                    className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-bold text-white transition-colors duration-300 hover:bg-accent-hover sm:w-fit sm:text-lg cursor-pointer"
                 >
-                {homeData.buttons.findPlant}
+                    {homeData.buttons.findPlant}
                 </button>
             </div>
 
