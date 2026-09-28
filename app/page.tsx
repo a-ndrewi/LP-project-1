@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cv from "./components/Cv";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -10,6 +10,20 @@ import homeData from "./data/home.json";
 export default function Home() {
   const basePath = "/LP-project-1";
   const [cvOpen, setCvOpen] = useState(false);
+
+  useEffect(() => {
+    if (!cvOpen) return;
+
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousDocumentOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousDocumentOverflow;
+    };
+  }, [cvOpen]);
 
   return (
     <>
@@ -49,7 +63,7 @@ export default function Home() {
             className="absolute inset-0 bg-slate-900/30 backdrop-blur-[2px]"
           />
 
-          <div className="relative z-10 w-full max-w-[760px] max-h-[88vh] overflow-y-auto rounded-[18px] bg-white p-2 shadow-2xl sm:p-3">
+          <div className="cv-scroll-container relative z-10 max-h-[88vh] w-full max-w-[760px] overflow-y-auto rounded-[30px] bg-white p-2 shadow-2xl sm:p-3">
             <div className="mb-2 flex justify-end">
               <button
                 type="button"
