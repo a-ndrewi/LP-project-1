@@ -8,17 +8,7 @@ import {
   useRef,
   useState,
 } from "react";
-
-type Slide = {
-  image: string;
-  alt: string;
-  text: string;
-};
-
-type PlantHighlightsCarouselProps = {
-  basePath: string;
-  items: Slide[];
-};
+import type { PlantHighlightsCarouselProps } from "./PlantHighlightsCarousel.types";
 
 export default function PlantHighlightsCarousel({
   basePath,

@@ -1,21 +1,5 @@
-export type CvIconName =
-  | "mail"
-  | "phone"
-  | "location"
-  | "behance"
-  | "dribbble"
-  | "figma"
-  | "photoshop"
-  | "illustrator"
-  | "xd"
-  | "research"
-  | "travel"
-  | "reading"
-  | "writing";
-
-type CvIconProps = {
-  name: CvIconName;
-};
+import type { CvIconProps } from "./CvIcon.types";
+export type { CvIconName } from "./CvIcon.types";
 
 export default function CvIcon({ name }: CvIconProps) {
   switch (name) {

@@ -1,6 +1,4 @@
-type HeaderProps = {
-    title: string;
-};
+import type { HeaderProps } from "./Header.types";
 
 export default function Header({ title }: HeaderProps) {
     return (

@@ -1,6 +1,4 @@
-type FooterProps = {
-    text: string;
-};
+import type { FooterProps } from "./Footer.types";
 
 export default function Footer({ text }: FooterProps) {
     return (

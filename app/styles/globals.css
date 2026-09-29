@@ -52,6 +52,54 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.heart-logo {
+  transition: border-color 300ms ease;
+}
+
+.heart-logo-image {
+  transition: filter 300ms ease;
+}
+
+.heart-logo:hover {
+  border-color: var(--accent);
+}
+
+.heart-logo:hover .heart-logo-image {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(21%) saturate(1228%)
+    hue-rotate(49deg) brightness(94%) contrast(88%);
+}
+
+.stats-underline {
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: stats-underline-draw 600ms ease-out 150ms forwards;
+}
+
+.stats-underline--second {
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: stats-underline-draw 600ms ease-out 150ms forwards;
+}
+
+.stats-underline--third {
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: stats-underline-draw 600ms ease-out 150ms forwards;
+}
+
+@keyframes stats-underline-draw {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stats-underline {
+    animation: none;
+    transform: none;
+  }
+}
+
 .cv-scroll-container {
   scrollbar-width: none;
   -ms-overflow-style: none;

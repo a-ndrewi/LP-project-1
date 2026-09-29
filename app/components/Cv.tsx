@@ -1,5 +1,6 @@
 import Image from "next/image";
-import CvIcon, { type CvIconName } from "./CvIcon";
+import CvIcon from "./CvIcon";
+import type { CvIconName } from "./CvIcon.types";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "/LP-project-1";
 const technicalSkills: { name: string; icon: CvIconName }[] = [
