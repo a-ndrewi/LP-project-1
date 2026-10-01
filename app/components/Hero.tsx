@@ -1,5 +1,6 @@
 import homeData from "../data/home.json"
 import Image from "next/image";
+import Link from "next/link";
 import type { HeroProps } from "./Hero.types";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -67,7 +68,11 @@ export default function Hero({ basePath, hero, stats, buttonText, onOpenCv }: He
                     >
                         {homeData.buttons.findPlant}
                     </button>
-                    <div className="heart-logo flex size-16 shrink-0 items-center justify-center rounded-full border border-primary sm:h-20 sm:w-20 md:h-26 md:w-26">
+                    <Link
+                        href="/form"
+                        aria-label="Open the form page"
+                        className="heart-logo flex size-16 shrink-0 cursor-pointer items-center justify-center rounded-full border border-primary sm:h-20 sm:w-20 md:h-26 md:w-26"
+                    >
                         <Image
                             src={`${basePath}${item.image}`}
                             alt="Heart Icon"
@@ -75,7 +80,7 @@ export default function Hero({ basePath, hero, stats, buttonText, onOpenCv }: He
                             height={40}
                             className="heart-logo-image h-10 w-10 sm:h-14 sm:w-14 md:h-25 md:w-25"
                         />
-                    </div>
+                    </Link>
                 </div>
                 <div className="w-full max-w-[320px] sm:max-w-[420px] md:max-w-[680px] lg:max-w-[760px]">
                 <Image

@@ -69,6 +69,27 @@ body {
     hue-rotate(49deg) brightness(94%) contrast(88%);
 }
 
+.heart-logo:focus-visible,
+.form-back-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.form-style-input {
+  outline: none;
+  box-shadow: none;
+}
+
+.form-style-input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: none;
+}
+
+.form-back-link:hover {
+  color: var(--accent);
+}
+
 .stats-underline {
   transform: scaleX(0);
   transform-origin: left;
